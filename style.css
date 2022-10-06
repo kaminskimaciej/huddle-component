@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --primary-violet: hsl(257, 40%, 49%);
+  --primary-soft-magenta: hsl(300, 69%, 71%);
+  --font-weight-small: 400;
+  --font-weight-medium: 600;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(257, 40%, 49%);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 60px 30px 70px;
+
+  max-width: 1375px;
+}
+
+/* Register - poppins
+The rest- open sans */
+
+img.header__logo {
+  width: 200px;
+  padding-bottom: 60px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main__img {
+  width: 55%;
+}
+
+.main__cta {
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+p,
+h1 {
+  margin-bottom: 20px;
+}
+
+.cta__heading {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.cta__description {
+  font-family: "Open Sans", sans-serif;
+  color: whitesmoke;
+  line-height: 1.6em;
+  margin-bottom: 20px;
+}
+
+.cta__btn {
+  border: none;
+  border-radius: 40px;
+  padding: 18px 65px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  color: hsla(257, 40%, 49%, 0.9);
+  font-size: 18px;
+}
+
+.cta__btn:hover {
+  background-color: var(--primary-soft-magenta);
+  color: white;
+}
+.footer ul {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  list-style: none;
+  margin-left: 20px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 980px) {
+  body {
+    width: 50vh;
+    background-image: url(./images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(257, 40%, 49%);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 0;
+  }
+
+  .main__img,
+  .footer {
+    align-self: center;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__cta {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .main__img {
+    width: 90%;
+  }
+
+  img.header__logo {
+    width: 40%;
+    padding-bottom: 20px;
+  }
+
+  .cta__btn {
+    width: 240px;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+}
